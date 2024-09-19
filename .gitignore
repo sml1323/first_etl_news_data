@@ -1,0 +1,22 @@
+# Python 관련
+__pycache__/
+
+# 환경변수 파일
+.env
+
+# 가상환경
+env/
+
+# airflow
+Airflow/
+
+# 로그 파일
+*.log
+
+logging_config.py
+red.py
+app.log
+
+# 기타
+*.pyc
+.DS_Store
