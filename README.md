@@ -24,6 +24,11 @@ git clone
 
 env에 변수 입력
 
+필요한 패키지 설치
+
+pip install -r requirements.txt
+
+
 ## main.py 설정
 
 fetch_limit  : 페이지 갯수
