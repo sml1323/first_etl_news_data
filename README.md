@@ -14,19 +14,29 @@
 - **프로그래밍 언어**: Python 3.x
 - **데이터베이스**: PostgreSQL, Amazon Redshift
 - **API**: OpenAI GPT API, 네이버 뉴스 검색 API
-- **패키지 및 라이브러리**: `psycopg2`, `openai`, `python-dotenv`, `redshift-connector`, `matplotlib`, `pandas`
+- **패키지 및 라이브러리**: 
+    - `psycopg2`: Postgres, Redshift 연동
+    - `openai`: OpenAI API 연동
+    - `python-dotenv`: 환경 변수 관리
+    - `redshift-connector`: Redshift 연동
+    - `matplotlib`, `pandas`: 데이터 분석 및 시각화
 
 
 ## 설치 및 실행 방법
 
 ```bash
-git clone
+git clone ...
 
-env에 변수 입력
+# 가상환경 설치
+python -m venv env
+source venv/bin/activate
 
-필요한 패키지 설치
-
+# 필요한 패키지 설치
 pip install -r requirements.txt
+
+# 환경 변수 설정
+cp .env.example .env
+.env에 변수 입력
 
 
 ## main.py 설정
@@ -36,7 +46,14 @@ display      : 페이지당 가져올 뉴스의 수
 start =      : 가져올 뉴스의 시작 페이지
 
 
-   
+
+
+
+
+```
+
+
+![output](https://github.com/user-attachments/assets/5ab94fb0-58c2-4b81-ae65-7db8a8f6bfc4)
 
 
 
