@@ -61,10 +61,6 @@ def main():
                 last_pubdate = get_last_pubdate_from_db(conn)
                 logging.info(f"DB에서 가장 최근의 pubDate: {last_pubdate}")
 
-                # # 필터링 기준 날짜를 수동으로 설정
-                # filtered_date = "2024-09-01 00:00:00"
-                # manual_pubdate = datetime.strptime(filtered_date, "%Y-%m-%d %H:%M:%S")
-
                 for page in range(fetch_limit):
                     # 뉴스 데이터를 가져오기
                     news_data = fetch_news_data(client_id, client_secret, encText, start + page * display, display)
@@ -86,12 +82,6 @@ def main():
                             return
                             
                             
-                        #     return
-                        # 수동 설정한 날짜 이후의 뉴스만 필터링
-                        # if news_pubdate_datetime < manual_pubdate:
-                        #     logging.info(f"수동 설정한 날짜 {manual_pubdate} 에 도달했습니다. 가져오기를 중단합니다.")
-                        #     continue
-
                         filtered_news.append(item)
 
                     logging.info(f"필터링된 뉴스 개수: {len(filtered_news)}")
